@@ -1,6 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-thm-50: #ececec;
+  --color-thm-100: #0f172a;
+  --color-thm-200: #7b8eba;
+  --color-thm-300: #6077ac;
+  --color-thm-400: #4e6395;
+  --color-thm-500: #40527a;
+  --color-thm-600: #324060;
+  --color-thm-700: #212c42;
+  --color-thm-800: #212c42;
+  --color-thm-900: #1c2538;
+  --color-thm: #151c2b;
+
+  --color-green-100: #3bc81e;
+  --color-green: #a3ea2a;
+
+  --color-red-100: #7a1123;
+  --color-red-200: #ff5b67;
+  --color-red: #eb0037;
+
+  --color-gray: #525a6a;
+
+  --color-blue-100: #1153e4;
+  --color-blue: #719cf9;
+
+  --color-yellow: #dead0a;
+
+  --color-white-100: #f9f9fb;
+  --color-white-200: #94a3b8;
+  --color-white: #ffffff;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 :root {
   font-family: "Source Sans Pro", "Ubuntu", sans-serif;
