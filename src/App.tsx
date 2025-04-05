@@ -1,10 +1,9 @@
-/* eslint-disable @typescript-eslint/restrict-plus-operands */
-import "./App.css";
+import "./app.module.css";
 
 function App() {
   return (
-    <section className="min-h-screen bg-thm text-white flex flex-col">
-      Hello World!
+    <section className="container mx-auto px-4 py-12">
+      <h1>Hello World!</h1>
     </section>
   );
 }

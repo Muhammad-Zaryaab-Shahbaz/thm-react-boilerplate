@@ -1,4 +1,8 @@
-@import 'tailwindcss';
+@layer theme, base, components, primereact, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "primereact/resources/themes/tailwind-light/theme.css" layer(primereact);
 
 @theme {
   --color-thm-50: #ececec;
@@ -9,7 +13,7 @@
   --color-thm-500: #40527a;
   --color-thm-600: #324060;
   --color-thm-700: #212c42;
-  --color-thm-800: #212c42;
+  --color-thm-800: #2d3d5f;
   --color-thm-900: #1c2538;
   --color-thm: #151c2b;
 
@@ -30,6 +34,8 @@
   --color-white-100: #f9f9fb;
   --color-white-200: #94a3b8;
   --color-white: #ffffff;
+
+  --font-ubuntu: "Ubuntu", sans-serif;
 }
 
 /*

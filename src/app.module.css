@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Source+Sans+Pro");
+@reference "./index.css";
+
+body {
+  min-height: 100vh;
+  color: #ececec;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Ubuntu";
+  @apply text-white-100 text-3xl font-medium;
+}
