@@ -9,7 +9,7 @@ const designSystem: PrimeReactPTOptions = {
   inputtext: {
     root: {
       className:
-        "py-1 text-slate-300 placeholder:text-slate-400 text-sm bg-thm border-slate-500 focus:border-blue focus:shadow-none",
+        "py-1.5 text-slate-300 placeholder:text-slate-400 text-sm bg-thm !border-slate-500 focus:border-blue focus:shadow-none",
     },
   },
   datatable: {
@@ -19,16 +19,18 @@ const designSystem: PrimeReactPTOptions = {
     column: {
       root: { className: "text-slate-300 text-sm" },
       headerCell: {
-        className: "py-5 bg-thm-900 py-4 border border-solid border-thm-700",
+        className: "py-2.5 bg-thm-700 border border-solid border-thm-700",
       },
       bodyCell: {
-        className: "border border-solid border-thm-700 whitespace-nowrap",
+        className: "py-3 border border-solid border-thm-700",
       },
     },
     bodyRow: ({ context }: Context) => {
       const { index } = context;
       return {
-        className: `${index % 2 === 0 ? "bg-thm-700" : "bg-thm-900"}`,
+        className: `cursor-pointer hover:bg-thm-900 ${
+          index % 2 === 0 ? "bg-thm-600" : "bg-thm-700"
+        }`,
       };
     },
     footer: {
@@ -36,6 +38,9 @@ const designSystem: PrimeReactPTOptions = {
     },
     rowExpansion: {
       className: "bg-red",
+    },
+    emptyMessage: {
+      className: "bg-thm-900 td>text-center",
     },
   },
   dialog: {
@@ -59,7 +64,7 @@ const designSystem: PrimeReactPTOptions = {
   dropdown: {
     root: {
       className:
-        "bg-thm-900 border border-solid border-slate-600 text-slate-100 rounded-sm",
+        "bg-thm-600 border border-solid border-slate-600 text-slate-100 rounded-sm",
     },
     input: {
       className: "py-1 pl-3 text-sm text-slate-100 placeholder:text-slate-100",
@@ -68,7 +73,7 @@ const designSystem: PrimeReactPTOptions = {
       className: "text-sm text-slate-500 font-light",
     },
     wrapper: {
-      className: "bg-thm-900 text-slate-100 rounded-sm",
+      className: "bg-thm-600 text-slate-100 rounded-sm",
     },
     list: { className: "py-3 list-none m-0 bg-thm-700" },
     item: ({ context }: Context) => {
@@ -92,6 +97,22 @@ const designSystem: PrimeReactPTOptions = {
     root: {
       className:
         "py-1 text-slate-300 placeholder:text-slate-400 text-sm bg-thm border-slate-500 focus:border-blue focus:shadow-none",
+    },
+  },
+  toast: {
+    message: {
+      className: "text-sm",
+    },
+    icon: {
+      className: "w-5 h-5",
+    },
+  },
+  knob: {
+    label: {
+      className: "fill-white-300",
+    },
+    value: {
+      className: "stroke-green",
     },
   },
 };
